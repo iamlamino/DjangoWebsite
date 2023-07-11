@@ -27,8 +27,8 @@
         <td>{{ user.organization }}</td>    
     
         <td>  
-            <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
-            <a href="/delete/{{ employee.id }}">Delete</a>  
+            <a href="/polls/edit/{{ user.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+            <a href="/polls/remove/{{ user.id }}">Delete</a>  
         </td>  
     </tr>  
 {% endfor %}  
@@ -36,6 +36,6 @@
 </table>  
 <br>  
 <br>  
-<center><a href="/emp" class="btn btn-primary">Add New Record</a></center>  
+<center><a href="/polls/index" class="btn btn-primary">Add New Record</a></center>  
 </body>  
 </html>  

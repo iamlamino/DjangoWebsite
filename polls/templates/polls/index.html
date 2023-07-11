@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
 </head>  
 <body>  
-<form method="POST" class="post-form" action="authentificated/">  
+<form method="POST" class="post-form" action="" >  
         {% csrf_token %}  
     <div class="container">  
 <br>  
@@ -36,7 +36,7 @@
     </div>  
   </div>  
     <div class="form-group row">  
-    <label class="col-sm-2 col-form-label">organization</label>  
+    <label class="col-sm-2 col-form-label">Organization</label>  
     <div class="col-sm-4">  
       {{ form.organization }}  
     </div>  
@@ -44,9 +44,9 @@
     <div class="form-group row">  
     <label class="col-sm-1 col-form-label"></label>  
     <div class="col-sm-4">  
-    <button type="submit" class="btn btn-primary">Submit</button>  
+    <button type="submit"  class="btn btn-primary">Submit</button>
     </div>  
-  </div>  
+  </div> 
     </div>  
 </form>  
 </body>  
