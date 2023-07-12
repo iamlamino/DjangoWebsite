@@ -22,13 +22,14 @@ def authentificated(request):
 def edit(request,user_id):  
     user = User.objects.get(pk=user_id)  
     return render(request,"polls/edit.html", {'user':user})  
-def update(request,user_id):  
-    user = user.objects.get(pk=user_id)  
-    form = UserForm(request.POST,instance = user)  
-    if form.is_valid():  
-        form.save()  
-        return redirect('authentificated')  
-    return render(request, "polls/edit.html", {'user': user})  
+def update(request,user_id): 
+    user = User.objects.get(pk=user_id)
+    if request.method == "POST":  
+        form = UserForm(request.POST,instance = user)  
+        if form.is_valid():  
+            form.save()  
+            return redirect('authentificated')  
+    return render(request, "polls/index.html", {'user': user})  
 
 def remove(request,user_id):  
     user = User.objects.get(pk=user_id)  
