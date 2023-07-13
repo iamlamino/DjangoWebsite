@@ -15,6 +15,7 @@ import os
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 import dj_database_url
 import environ
+import whitenoise
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
