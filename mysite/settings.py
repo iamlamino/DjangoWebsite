@@ -83,18 +83,20 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Siteweb',
-        'USER': 'siteweb_user',
-        'PASSWORD': 'NdpQ2ycWuPJE4eFxNNkJGjuBgDeCKZnU',
-        'HOST': '%',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
-}"""
+}
+"""
 
 DATABASES = {'default':dj_database_url.config(default='postgres://siteweb_user:NdpQ2ycWuPJE4eFxNNkJGjuBgDeCKZnU@dpg-cintvt59aq06u3k57llg-a.oregon-postgres.render.com/siteweb',conn_max_age=600)} 
+"""
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
