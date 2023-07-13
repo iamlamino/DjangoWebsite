@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'style.css' %}"/>  
 </head>  
 <body>  
-<form method="POST" class="post-form" action="http://127.0.0.1:8000/update/{{user.id}}/">  
+<form method="POST" class="post-form" action="/update/{{user.id}}/">  
         {% csrf_token %}  
     <div class="container">  
 <br>  

@@ -10,7 +10,7 @@ def index(request):
         if form.is_valid():  
             try:  
                 form.save()  
-                return redirect('authentificated')
+                return redirect('/authentificated/')
             except:  
                 HttpResponseNotFound("Cant find page")
     else:  
@@ -28,11 +28,11 @@ def update(request,user_id):
         form = UserForm(request.POST,instance = user)  
         if form.is_valid():  
             form.save()  
-            return redirect('authentificated')  
+            return redirect('/authentificated/')  
     return render(request, "polls/index.html", {'user': user})  
 
 def remove(request,user_id):  
     user = User.objects.get(pk=user_id)  
     user.delete()
     print(id)
-    return redirect('authentificated')
+    return redirect('/authentificated/')
