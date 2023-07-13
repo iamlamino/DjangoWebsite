@@ -14,11 +14,14 @@ from pathlib import Path
 from django.urls import path
 import os
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+import dj_database_url
+import environ
 
-urlpa
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+env = environ.Env()
+environ.Env.read_env()
 
 
 # Quick-start development settings - unsuitable for production
@@ -30,7 +33,7 @@ SECRET_KEY = 'django-insecure-9_rn&3m^i$s+ze2jxg52*&+#ctiz)1&3epc5rn4h1l_89b_6g^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,18 +83,18 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Siteweb',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'USER': 'siteweb_user',
+        'PASSWORD': 'NdpQ2ycWuPJE4eFxNNkJGjuBgDeCKZnU',
+        'HOST': '%',
         'PORT': '5432',
     }
-}
+}"""
 
-
+DATABASES = {'default':dj_database_url.config(default='postgres://siteweb_user:NdpQ2ycWuPJE4eFxNNkJGjuBgDeCKZnU@dpg-cintvt59aq06u3k57llg-a.oregon-postgres.render.com/siteweb',conn_max_age=600)} 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -128,6 +131,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+#MEDIA_URL = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
