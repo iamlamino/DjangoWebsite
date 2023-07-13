@@ -10,7 +10,7 @@ def index(request):
         if form.is_valid():  
             try:  
                 form.save()  
-                return redirect('../authentificated')
+                return redirect('/authentificated/')
             except:  
                 HttpResponseNotFound("Cant find page")
     else:  
