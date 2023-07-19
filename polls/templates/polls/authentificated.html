@@ -12,7 +12,7 @@
 <div class="container col-sm-8"> 
 <table class="table mb-6  table-borderedless">  
     <thead class="bg-primary-subtle">  
-    <tr class="h3">  
+    <tr class="h2">  
         <th>ID</th>  
         <th>first Name</th>  
         <th>last Name</th>
@@ -33,7 +33,7 @@
     
         <td >  
             <a href="/edit/{{ user.id }}" class="btn  p-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 "><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
-            <a href="/remove/{{ user.id }}" class="btn p-2 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Delete</a>  
+            <a href="/remove/{{ user.id }}" class="btn p-2 text-primary-emphasis bg-danger-subtle border border-danger-subtle rounded-3">Delete</a>  
         </td>  
     </tr>  
 {% endfor %}  

@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse,HttpResponseNotFound
 from .models import User
 from django.template import loader
+from rest_framework import routers, serializers, viewsets
+from polls.serializers import UserSerializer
 
 from polls.form import UserForm  
 def index(request):  
@@ -36,3 +38,8 @@ def remove(request,user_id):
     user.delete()
     print(id)
     return redirect('authentificated')
+
+class UserViewSet(viewsets.ModelViewSet):
+        queryset = User.objects.all()
+        serializer_class = UserSerializer
+
