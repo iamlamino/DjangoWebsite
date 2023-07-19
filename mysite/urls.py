@@ -23,6 +23,7 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.registry.extend(user_router.registry)
+
 urlpatterns = [path('admin/', admin.site.urls),
             path('', include("polls.urls")),
             path ('api/',include(router.urls))

@@ -11,6 +11,7 @@ urlpatterns = [
     path("authentificated/", views.authentificated, name="authentificated"),
     path("edit/<int:user_id>/",views.edit,name="edit"),
     path("remove/<int:user_id>/",views.remove,name="remove"),
+    path("update/<int:user_id>/",views.update,name="edit"),
     
     
 
