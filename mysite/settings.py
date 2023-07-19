@@ -13,6 +13,7 @@ from pathlib import Path
 from django.urls import path
 import dj_database_url
 import environ
+import rest_framework
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -44,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework.authtoken',
     'polls'
 ]
 
